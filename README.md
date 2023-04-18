@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+# Sistema de gestão de processos de manutenção de veículos
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este é um sistema simples para gestão de processos, se tratando de serviços de manutenção de veículos.
 
-## Available Scripts
+## Instruções de como executar a aplicação
 
-In the project directory, you can run:
+### Com Docker
+- A aplicação conta com um arquivo Dockerfile para realizar o build e um arquivo docker-compose para gerir as aplicações.
+- Utilize o comando `docker-compose up`, aguarde a finalização e acesse em http://localhost:3000.
 
-### `npm start`
+### Sem Docker
+- Instale as dependências com o comando `npm install`.
+- Após a instalação, execute a aplicação com o comando `npm start`.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Instruções gerais para teste
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Leitura de clientes
+- Em `./utils/` existe um arquivo de imagem contendo um código já cadastrado, basta apontar o leitor para o mesmo.
+- A aplicação conta com a seguinte estrutura JSON presente no código QR:
+```json
+{
+    "id": 1,
+    "name": "Ana Clara",
+    "email": "anaclara@contato.com",
+    "phone": "XX999999999",
+    "vehicles": [
+        {
+            "brand": "Ford",
+            "model": "Fusion",
+            "year": "2019",
+            "license": "MMM-111"
+        },
+        {
+            "brand": "Fiat",
+            "model": "Palio",
+            "year": "2013",
+            "license": "RRR-222"
+        }
+    ],
+    "services": [
+        1,
+        2,
+        3
+    ]
+}
+```
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Funcionalidades
+- É possível fazer a leitura do QRcode do cliente para trazer suas informações.
+- É possível cadastrar um novo serviço para o cliente.
+- É possível imprimir uma oferta de prestação de serviços.
+- É possível fazer consultas de serviços cadastrados.
+- É possível filtrar os serviços pelos profissionais responsáveis.
