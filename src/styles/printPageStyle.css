@@ -1,0 +1,18 @@
+@media print {
+  @page {
+    size: A5;
+  }
+  body {
+    font-size: 12pt;
+    line-height: 1.5;
+  }
+  h1,
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+  p {
+    widows: 2;
+    orphans: 2;
+  }
+}/*# sourceMappingURL=printPageStyle.css.map */
