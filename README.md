@@ -16,6 +16,7 @@ Este é um sistema simples para gestão de processos, se tratando de serviços d
 
 ### Leitura de clientes
 - Em `./utils/` existe um arquivo de imagem contendo um código já cadastrado, basta apontar o leitor para o mesmo.
+- A aplicação tem suporte a códigos AZTEC e QR MATRIX.
 - A aplicação conta com a seguinte estrutura JSON presente no código QR:
 ```json
 {
