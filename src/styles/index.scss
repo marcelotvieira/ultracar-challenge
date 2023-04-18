@@ -275,3 +275,36 @@ body {
         }
     }
 }
+
+@media screen and (max-width: 600px) {
+    .page {
+        margin-left: 0;
+        padding: 2rem 0;
+        overflow-x: hidden;
+
+    }
+
+    .new-service-box {
+        min-width: 100% !important;
+        width: 100% !important;
+
+        .flex {
+            flex-wrap: wrap;
+        }
+    }
+
+    .add-new-service {
+        max-width: 80%;
+
+    }
+
+
+
+    .sider {
+        display: none;
+    }
+
+    .header {
+        display: none;
+    }
+}

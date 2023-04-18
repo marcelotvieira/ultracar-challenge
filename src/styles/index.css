@@ -212,4 +212,28 @@ body {
 .service-item ul li {
   padding: 0.5rem;
   border-right: 3px solid rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 600px) {
+  .page {
+    margin-left: 0;
+    padding: 2rem 0;
+    overflow-x: hidden;
+  }
+  .new-service-box {
+    min-width: 100% !important;
+    width: 100% !important;
+  }
+  .new-service-box .flex {
+    flex-wrap: wrap;
+  }
+  .add-new-service {
+    max-width: 80%;
+  }
+  .sider {
+    display: none;
+  }
+  .header {
+    display: none;
+  }
 }/*# sourceMappingURL=index.css.map */
